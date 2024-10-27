@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shourtcut icon" type="x-icon" href="./img/logo.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- *bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- *main style sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body >
+    <!-- loading page -->
+    <div class="loading d-none"> <span class="loader"></span></div>
+
+    <!-- side nav -->
+    <section class="home bg-black min-vh-100">
+      <div class="side-navbar min-vh-100 d-flex position-fixed top-0 z-3">
+        <div
+          class="menu bg-black d-flex flex-column justify-content-between ps-4 py-4 w-75"
+        >
+          <div class="menu-items" >
+            <ul class="p-0 pt-2 overflow-hidden "style="isolation: isolate;">
+              <li class="search  position-relative">Search</li>
+              <li class="categories position-relative ">Categories</li>
+              <li class="area position-relative">Area</li>
+              <li class="ingrediants position-relative">Ingredients</li>
+              <li class="contact position-relative">Contact Us</li>
+            </ul>
+          </div>
+          <div class="menu-footer text-white">
+            <div class="socail-icons">
+              
+              <a href="https://facebook.com" class="text-white" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com"  class="text-white" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+        <div
+          class="header bg-white d-flex flex-column justify-content-between px-2 py-3 align-items-center "
+          
+        >
+          <img src="./img/logo.png" alt="" style="width: 50px" />
+          <i class="icon fa-solid fa-2x fa-align-justify"></i>
+          <div>
+            <i class="fa-solid fa-globe d-block"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- home content -->
+      <div class="container py-5">
+        <div class="search-content px-5"></div>
+        <div class="display row row-cols-md-4"></div>
+
+        <!-- contact form -->
+        <div
+          class="contact-content d-flex flex-column align-items-center justify-content-center d-none"
+          style="height: 80vh"
+        >
+          <form class="mt-5">
+            <div class="row w-75 mx-auto row-cols-md-2 d-flex mt-4">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control nameInput"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter Your Name"
+                  autocomplete="off"
+                  oninput="validation('nameInput',nameRegex)"
+                />
+                <div class="d-none error alert alert-danger w-100 mt-2 text-center">Special characters and numbers not allowed</div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control email"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter Your Email"
+                  autocomplete="off"
+                  oninput="validation('email' , emailRegex)"
+                />
+                <div class="d-none error alert alert-danger w-100 mt-2 text-center">Email not valid *exemple@yyy.zzz</div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control phone"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter Your Phone"
+                  autocomplete="off"
+                  oninput="validation('phone' , phoneRegex)"
+                />
+                <div class="d-none error alert alert-danger w-100 mt-2 text-center">Enter valid Phone Number</div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control age"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter Your Age"
+                  autocomplete="off"
+                  oninput="validation('age' , ageRegex)"
+                />
+                <div class="d-none error alert alert-danger w-100 mt-2 text-center">Enter valid age</div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control password"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter Your Password"
+                  autocomplete="off"
+                  oninput="validation('password' , passRegex)"
+                />
+                <div class="d-none error alert alert-danger w-100 mt-2 text-center">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control confirmPass"
+                  id="exampleFormControlInput1"
+                  placeholder="Repassword"
+                  autocomplete="off"
+                  oninput="validation('confirmPass' , emailRegex)"
+                />
+                <div class="d-none error alert alert-danger w-100 mt-2 text-center">Enter valid repassword</div>
+              </div>
+            </div>
+          </form>
+          <button type="submit" class="submit-button btn btn-outline-danger" disabled>
+            Submit
+          </button>
+        </div>
+
+        <div class="deatail"></div>
+      </div>
+    </section>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
